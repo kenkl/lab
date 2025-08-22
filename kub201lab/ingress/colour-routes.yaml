@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: colour-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+    - host: colours.app.kenkl.org
+      http:
+        paths:
+          - path: /red
+            pathType: Prefix
+            backend:
+              service:
+                name: red-service
+                port:
+                  number: 5678
+          - path: /green
+            pathType: Prefix
+            backend:
+              service:
+                name: green-service
+                port:
+                  number: 5678
+          - path: /blue
+            pathType: Prefix
+            backend:
+              service:
+                name: blue-service
+                port:
+                  number: 5678
