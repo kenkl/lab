@@ -18,7 +18,7 @@ spec:
       - image: httpd:alpine3.19
         name: httpd
         command: ["/bin/bash", "-c"] # override the default command
-        args: ["sleep 5; exit 1"] # sleep for a few seconds and then exit with an error
+        args: ["sleep 3; exit 1"] # sleep for a few seconds and then exit with an error
   strategy:
     type: RollingUpdate
     rollingUpdate:
