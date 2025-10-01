@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+    - name: echo a variable
+      shell: /Users/kenkl/bin/lab/ansible/deployscript.sh "{{ tag }}"
+      register: out
+    - debug: var=out.stdout_lines

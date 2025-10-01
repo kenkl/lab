@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  tasks:
+    - name: echo a variable
+      debug:
+        msg: "{{ my_var }}"
