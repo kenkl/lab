@@ -1,0 +1,22 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: yellow-app
+  labels:
+    app: yellow-app
+spec:
+  containers:
+    - name: yellow-app
+      image: hashicorp/http-echo
+      args: 
+        - "-text=yellow"
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: yellow-service
+spec:
+  selector:
+    app: yellow-app
+  ports:
+    - port: 5678   # Default port for image

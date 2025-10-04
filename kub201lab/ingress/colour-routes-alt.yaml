@@ -1,12 +1,12 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: colour-ingress
+  name: colour-ingress-alt
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: colours.app.kenkl.org
+    - host: colours.kenkl.org
       http:
         paths:
           - path: /red
