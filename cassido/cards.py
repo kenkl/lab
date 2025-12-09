@@ -29,7 +29,7 @@ class Deck:
 if __name__ == "__main__":
     deck = Deck()
     deck.shuffle()
-    print(deck.draw(5))  # Example: ['10♠', 'K♥', '3♣', 'J♦', '7♠']
-    print(len(deck.draw(5)))  # 5
-    print(deck.draw(2))  # Example: ['5♣', 'A♠']
+    print(deck.draw(5))
+    print(len(deck.draw(5)))
+    print(deck.draw(2))
 
